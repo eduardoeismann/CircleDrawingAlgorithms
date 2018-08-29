@@ -1,13 +1,13 @@
 package iceberg.algorithms;
 
 import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.awt.image.WritableRaster;
+
+import iceberg.Start;
 
 public class MiddlePoint {
-	public MiddlePoint() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public void CircleMiddlepoint(int xCenter, int yCenter, int radius, Color c){
+	public MiddlePoint(int xCenter, int yCenter, int radius, Color c){
 		int pix = c.getRGB();
 		int x = 0;
 		int y = radius;
@@ -31,25 +31,27 @@ public class MiddlePoint {
 	private void circlePoints(int cx, int cy, int x, int y, int pix){
 		int act = Color.red.getRGB();
 		
+		Start start = new Start();
+		
 		if (x == 0) {
-			raster.setPixel(act, cx, cy + y);
-			raster.setPixel(pix, cx, cy - y);
-			raster.setPixel(pix, cx + y, cy);
-			raster.setPixel(pix, cx - y, cy);
+			start.setPixel(act, cx, cy + y);
+			start.setPixel(pix, cx, cy - y);
+			start.setPixel(pix, cx + y, cy);
+			start.setPixel(pix, cx - y, cy);
 		} else if (x == y) {
-			raster.setPixel(act, cx + x, cy + y);
-			raster.setPixel(pix, cx - x, cy + y);
-			raster.setPixel(pix, cx + x, cy - y);
-			raster.setPixel(pix, cx - x, cy - y);
+			start.setPixel(act, cx + x, cy + y);
+			start.setPixel(pix, cx - x, cy + y);
+			start.setPixel(pix, cx + x, cy - y);
+			start.setPixel(pix, cx - x, cy - y);
 		} else if (x < y) {
-			raster.setPixel(act, cx + x, cy + y);
-			raster.setPixel(pix, cx - x, cy + y);
-			raster.setPixel(pix, cx + x, cy - y);
-			raster.setPixel(pix, cx - x, cy - y);
-			raster.setPixel(pix, cx + y, cy + x);
-			raster.setPixel(pix, cx - y, cy + x);
-			raster.setPixel(pix, cx + y, cy - x);
-			raster.setPixel(pix, cx - y, cy - x);
+			start.setPixel(act, cx + x, cy + y);
+			start.setPixel(pix, cx - x, cy + y);
+			start.setPixel(pix, cx + x, cy - y);
+			start.setPixel(pix, cx - x, cy - y);
+			start.setPixel(pix, cx + y, cy + x);
+			start.setPixel(pix, cx - y, cy + x);
+			start.setPixel(pix, cx + y, cy - x);
+			start.setPixel(pix, cx - y, cy - x);
 		}
 	}
 
