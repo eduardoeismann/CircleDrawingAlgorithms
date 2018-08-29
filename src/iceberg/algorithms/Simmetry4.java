@@ -1,10 +1,13 @@
 package iceberg.algorithms;
 
+import java.awt.Color;
+
 public class Simmetry4 {
-	/*
-	 *  TODO - sto deve ser transformado em um metodo void.
+	public Simmetry4() {
+		// TODO Auto-generated constructor stub
+	}
 	
-	public class CircleSimmetry4(int xCenter, int yCenter, int radius, Color c){
+	public void simmetry4( int xCenter, int yCenter, int radius, Color c ) {
 		int pix = c.getRGB();
 		int x, y, r2;
 		r2 = radius * radius;
@@ -19,5 +22,5 @@ public class Simmetry4 {
 			raster.setPixel(pix, xCenter - x, yCenter - y);
 		}
 	}
-	 * */
+	
 }

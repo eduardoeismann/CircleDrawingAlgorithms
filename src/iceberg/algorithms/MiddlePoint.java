@@ -3,7 +3,6 @@ package iceberg.algorithms;
 import java.awt.Color;
 
 public class MiddlePoint {
-	
 	public MiddlePoint() {
 		// TODO Auto-generated constructor stub
 	}
@@ -29,7 +28,7 @@ public class MiddlePoint {
 		}
 	}
 	
-	private final void circlePoints(int cx, int cy, int x, int y, int pix){
+	private void circlePoints(int cx, int cy, int x, int y, int pix){
 		int act = Color.red.getRGB();
 		
 		if (x == 0) {

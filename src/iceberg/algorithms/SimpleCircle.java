@@ -1,9 +1,13 @@
 package iceberg.algorithms;
 
+import java.awt.Color;
+
 public class SimpleCircle {
-	/*
-	 *  TODO - Isto deve ser transformado em um metodo void.
-	public class SimpleCircle(int xCenter, int yCenter, int radius, Color c) {
+	public SimpleCircle() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void SimpleCircle(int xCenter, int yCenter, int radius, Color c) {
 		int pix = c.getRGB();
 		int x, y, r2;
 		r2 = radius * radius;
@@ -14,6 +18,5 @@ public class SimpleCircle {
 			raster.setPixel(pix, xCenter + x, yCenter - y);
 		}
 	}
-	 * 
-	 * */
+	
 }
