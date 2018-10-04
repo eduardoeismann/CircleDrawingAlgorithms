@@ -13,9 +13,6 @@ public class Simmetry4 {
 		
 		for(x = 0; x <= radius; x++) {
 			y = (int) (Math.sqrt(rSqrt - x*x) + 0.5);
-			System.out.println(x);
-			System.out.println(y);
-			System.out.println();
 			
 			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
 			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");

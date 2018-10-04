@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 import iceberg.algorithms.MiddlePoint;
 import iceberg.algorithms.Simmetry4;
+import iceberg.algorithms.Simmetry8;
 import iceberg.algorithms.SimpleCircle;
 
 public class Start {
@@ -25,7 +26,7 @@ public class Start {
 			} else if(option == 3) {
 				new Simmetry4(0,0,2);
 			} else if(option == 4) {
-				
+				new Simmetry8(0,0,2);
 			}
 		}
 	}
