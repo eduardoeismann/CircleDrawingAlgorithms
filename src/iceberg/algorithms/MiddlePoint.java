@@ -1,58 +1,50 @@
 package iceberg.algorithms;
 
-import java.awt.Color;
-import java.awt.image.BufferedImage;
-import java.awt.image.WritableRaster;
-
-import iceberg.Start;
-
 public class MiddlePoint {
-	public MiddlePoint(int xCenter, int yCenter, int radius, Color c){
-		int pix = c.getRGB();
-		int x = 0;
-		int y = radius;
-		int p = (5 - radius*4)/4;
-		circlePoints(xCenter, yCenter, x, y, pix);
+	private Integer x;
+	private Integer y;
+	private Integer pi;
+	
+	public MiddlePoint(Integer xCentral, Integer yCentral, Integer radius) {
+		x = 0;
+		y = radius;
+		pi = (5 - radius*4) / 4;
+		circlePoints(xCentral, yCentral, x, y);
 		
-		while (x < y) {
+		while(x < y) {
 			x++;
 			
-			if (p < 0) {
-				p += 2*x+1;
+			if(pi < 0) {
+				pi += 2*x+1;
 			} else {
 				y--;
-				p += 2*(x-y)+1;
+				pi += 2*(x-y)+1;
 			}
 			
-			circlePoints(xCenter, yCenter, x, y, pix);
+			circlePoints(xCentral, yCentral, x, y);
 		}
 	}
 	
-	private void circlePoints(int cx, int cy, int x, int y, int pix){
-		int act = Color.red.getRGB();
-		
-		Start start = new Start();
-		
-		if (x == 0) {
-			start.setPixel(act, cx, cy + y);
-			start.setPixel(pix, cx, cy - y);
-			start.setPixel(pix, cx + y, cy);
-			start.setPixel(pix, cx - y, cy);
-		} else if (x == y) {
-			start.setPixel(act, cx + x, cy + y);
-			start.setPixel(pix, cx - x, cy + y);
-			start.setPixel(pix, cx + x, cy - y);
-			start.setPixel(pix, cx - x, cy - y);
-		} else if (x < y) {
-			start.setPixel(act, cx + x, cy + y);
-			start.setPixel(pix, cx - x, cy + y);
-			start.setPixel(pix, cx + x, cy - y);
-			start.setPixel(pix, cx - x, cy - y);
-			start.setPixel(pix, cx + y, cy + x);
-			start.setPixel(pix, cx - y, cy + x);
-			start.setPixel(pix, cx + y, cy - x);
-			start.setPixel(pix, cx - y, cy - x);
+	private void circlePoints(Integer xCentral, Integer yCentral, Integer x, Integer y) {
+		if(x == 0) {
+			System.out.println("Ponto X,Y: [" + xCentral + " , " + (yCentral + y) + "]");
+			System.out.println("Ponto X,Y: [" + xCentral + " , " + (yCentral - y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral + y) + " , " + yCentral + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - y) + " , " + yCentral + "]");
+		} else if(x == y) {
+			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
+		} else if(x < y) {
+			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral + y) + " , " + (yCentral + x) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - y) + " , " + (yCentral + x) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral + y) + " , " + (yCentral - x) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - y) + " , " + (yCentral - x) + "]");
 		}
 	}
-
 }
