@@ -1,28 +1,26 @@
 package iceberg.algorithms;
 
-import java.awt.Color;
-
-import iceberg.Start;
-
 public class Simmetry4 {
-	public Simmetry4( int xCenter, int yCenter, int radius, Color c ) {
-		int pix = c.getRGB();
-		int x, y, r2;
+	private Integer x;
+	private Integer y;
+	private Integer rSqrt;
+	
+	public Simmetry4(Integer xCentral, Integer yCentral, Integer radius) {
+		rSqrt = radius * radius;
 		
-		Start start = new Start();
+		System.out.println("Ponto X,Y: [" + xCentral + " , " + (yCentral + radius) + "]");
+		System.out.println("Ponto X,Y: [" + xCentral + " , " + (yCentral - radius) + "]");
 		
-		r2 = radius * radius;
-		
-		start.setPixel(pix, xCenter, yCenter + radius);
-		start.setPixel(pix, xCenter, yCenter - radius);
-
-		for (x = 1; x <= radius; x++) {
-			y = (int) (Math.sqrt(r2 - x*x) + 0.5);
-			start.setPixel(pix, xCenter + x, yCenter + y);
-			start.setPixel(pix, xCenter + x, yCenter - y);
-			start.setPixel(pix, xCenter - x, yCenter + y);
-			start.setPixel(pix, xCenter - x, yCenter - y);
+		for(x = 0; x <= radius; x++) {
+			y = (int) (Math.sqrt(rSqrt - x*x) + 0.5);
+			System.out.println(x);
+			System.out.println(y);
+			System.out.println();
+			
+			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
+			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
 		}
 	}
-	
 }
