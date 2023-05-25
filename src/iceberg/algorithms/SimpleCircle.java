@@ -14,15 +14,15 @@ public class SimpleCircle {
 		
 		for(x = -radius; x <= radius; x++) {
 			y = (int) (Math.sqrt(rSqrt - x*x) + 0.5);
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
 			quantity += 2;
 		}
 		
 		endProcess = System.currentTimeMillis();
 		
-		System.out.println("Tempo de processamento: " + ( endProcess - startProcess ) );
-		System.out.println("quantidade de pontos: " + quantity);
+		System.out.println("Time processing: " + ( endProcess - startProcess ) + " milliseconds.");
+		System.out.println("Number of points: " + quantity);
 	}
 	
 }

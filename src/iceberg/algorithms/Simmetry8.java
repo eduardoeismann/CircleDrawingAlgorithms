@@ -12,10 +12,10 @@ public class Simmetry8 {
 		startProcess = System.currentTimeMillis();
 		rSqrt = radius * radius;
 		
-		System.out.println("Ponto X,Y: [" + xCentral + " , " + (yCentral + radius) + "]");
-		System.out.println("Ponto X,Y: [" + xCentral + " , " + (yCentral - radius) + "]");
-		System.out.println("Ponto X,Y: [" + (xCentral + radius) + " , " + yCentral + "]");
-		System.out.println("Ponto X,Y: [" + (xCentral - radius) + " , " + yCentral + "]");
+		System.out.println("Point X,Y: [" + xCentral + " , " + (yCentral + radius) + "]");
+		System.out.println("Point X,Y: [" + xCentral + " , " + (yCentral - radius) + "]");
+		System.out.println("Point X,Y: [" + (xCentral + radius) + " , " + yCentral + "]");
+		System.out.println("Point X,Y: [" + (xCentral - radius) + " , " + yCentral + "]");
 		
 		quantity += 4;
 		y = radius;
@@ -23,14 +23,14 @@ public class Simmetry8 {
 		y = (int) (Math.sqrt(rSqrt - 1) + 0.5);
 		
 		while(x < y) {
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + y) + " , " + (yCentral + x) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + y) + " , " + (yCentral - x) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - y) + " , " + (yCentral + x) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - y) + " , " + (yCentral - x) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + y) + " , " + (yCentral + x) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + y) + " , " + (yCentral - x) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - y) + " , " + (yCentral + x) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - y) + " , " + (yCentral - x) + "]");
 			quantity += 8;
 			
 			x += 1;
@@ -38,16 +38,16 @@ public class Simmetry8 {
 		}
 		
 		if(x == y) {
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
 			quantity += 4;
 		}
 		
 		endProcess = System.currentTimeMillis();
 		
-		System.out.println("Tempo de processamento: " + ( endProcess - startProcess ) );
-		System.out.println("quantidade de pontos: " + quantity);
+		System.out.println("Time processing: " + ( endProcess - startProcess ) + " milliseconds.");
+		System.out.println("Number of points: " + quantity);
 	}
 }

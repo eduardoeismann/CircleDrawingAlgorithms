@@ -30,32 +30,32 @@ public class MiddlePoint {
 		
 		endProcess = System.currentTimeMillis();
 		
-		System.out.println("Tempo de processamento: " + ( endProcess - startProcess ) );
-		System.out.println("quantidade de pontos: " + quantity);
+		System.out.println("Time processing: " + ( endProcess - startProcess ) + " milliseconds");
+		System.out.println("Number of points: " + quantity);
 	}
 	
 	private void circlePoints(Integer xCentral, Integer yCentral, Integer x, Integer y) {
 		if(x == 0) {
-			System.out.println("Ponto X,Y: [" + xCentral + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + xCentral + " , " + (yCentral - y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + y) + " , " + yCentral + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - y) + " , " + yCentral + "]");
+			System.out.println("Point X,Y: [" + xCentral + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + xCentral + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + y) + " , " + yCentral + "]");
+			System.out.println("Point X,Y: [" + (xCentral - y) + " , " + yCentral + "]");
 			quantity += 4;
 		} else if(x == y) {
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
 			quantity += 4;
 		} else if(x < y) {
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + y) + " , " + (yCentral + x) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - y) + " , " + (yCentral + x) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral + y) + " , " + (yCentral - x) + "]");
-			System.out.println("Ponto X,Y: [" + (xCentral - y) + " , " + (yCentral - x) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - x) + " , " + (yCentral + y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - x) + " , " + (yCentral - y) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + y) + " , " + (yCentral + x) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - y) + " , " + (yCentral + x) + "]");
+			System.out.println("Point X,Y: [" + (xCentral + y) + " , " + (yCentral - x) + "]");
+			System.out.println("Point X,Y: [" + (xCentral - y) + " , " + (yCentral - x) + "]");
 			quantity += 8;
 		}
 	}
